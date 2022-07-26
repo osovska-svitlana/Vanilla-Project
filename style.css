@@ -1,9 +1,13 @@
 .weather-border {
-  max-width: 600px;
+  max-width: 500px;
   margin: 10px auto;
   padding: 15px;
   border: 1px solid grey;
   border-radius: 5px;
+}
+.all-wrap {
+  max-width: 500px;
+  margin: 10px auto;
 }
 h1 {
   color: #70757a;
@@ -11,7 +15,9 @@ h1 {
   line-height: 28px;
   margin-bottom: 0;
   font-weight: 800;
-  
+}
+.list {
+  margin-bottom: 20px;
 }
 ul {
   margin: 0px;
@@ -26,17 +32,31 @@ li {
   margin: 0;
   padding: 0;
 }
+img {
+  margin-right: 12px;
+}
+.weather-img strong {
+  font-family: Google Sans, arial, sans-serif;
+  font-size: 48px;
+  line-height: 50px;
+}
+.signs { 
+  font-style: normal;
+  font-size: 15px;
+font-weight: 500;
+  vertical-align: top;
+    
+}
+
 .col-8 {
   font-family: Google Sans, arial, sans-serif;
   font-weight: 400;
 }
-.cel {
-  font-size: small;
-  vertical-align: text-bottom;
+/* .cel {
+  
   color: black;
 }
 .far {
-  font-size: small;
-  vertical-align: text-bottom;
+  
   color: #70757a;
-}
+} */
