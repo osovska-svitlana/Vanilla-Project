@@ -4,10 +4,13 @@
   padding: 15px;
   border: 1px solid grey;
   border-radius: 5px;
+  background-image: url();
 }
+
 .all-wrap {
   max-width: 500px;
   margin: 10px auto;
+
 }
 h1 {
   color: #70757a;
@@ -31,6 +34,7 @@ li {
   font-weight: 300;
   margin: 0;
   padding: 0;
+  text-transform: capitalize;
 }
 img {
   margin-right: 12px;
