@@ -1,6 +1,4 @@
-let apiKey = "959764aef958aca1c60220a4c8d8110c";
-let city = "Kyiv";  
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=959764aef958aca1c60220a4c8d8110c&units=metric`;
+
 
 function displayTemperature(responce) {
   console.log(responce);
@@ -34,5 +32,20 @@ function actualDate(timestamp) {
   return `${days}  ${hours}:${minutes}`;
 }
 
+function search(city) {
+let apiKey = "959764aef958aca1c60220a4c8d8110c";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=959764aef958aca1c60220a4c8d8110c&units=metric`;
 axios.get(apiUrl).then(displayTemperature);
+
+}
+  
+function handleSubbmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+
+let form = document.querySelector("#searchline");
+form.addEventListener("submit", handleSubbmit); // handleSubbmit - a function;
  

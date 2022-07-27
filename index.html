@@ -11,14 +11,28 @@
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-
     <title>Vanilla Project</title>
   </head>
   <body>
     <div class="container">
       <div class="all-wrap">
         <div class="weather-border">
-            
+          <form id="searchline" class="mb-3">
+            <div class="row">
+              <div class="col">
+                <input
+                  type="search"
+                  placeholder="What's your city?"
+                  class="form-control"
+                  id="city-input"
+                />
+              </div>
+              <div class="col">
+                <input type="submit" value="Search" class="btn btn-secondary"/>
+              </div>
+            </div>
+          </form>
+
           <h1 id="city"></h1>
           <div class="list">
             <ul>
@@ -43,8 +57,8 @@
             <div class="col">
               <ul>
                 <li>Pre</li>
-                <li>Humidity: <span id="humidity"></span> % </li>
-                <li>Wind: <span id="wind-speed"></span>  Km/h </li>
+                <li>Humidity: <span id="humidity"></span> %</li>
+                <li>Wind: <span id="wind-speed"></span> Km/h</li>
               </ul>
             </div>
           </div>
