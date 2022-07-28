@@ -56,6 +56,15 @@ img {
   font-family: Google Sans, arial, sans-serif;
   font-weight: 400;
 }
+
+.weather-img .active {
+  color:#70757a ;
+  cursor:auto;
+  text-decoration: none;
+} 
+.weather-img .active:hover{
+  text-decoration: none;
+}
 /* .cel {
   
   color: black;
