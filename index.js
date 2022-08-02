@@ -1,3 +1,10 @@
+function getForcastCoordinate(coordinates) {
+  // console.log(coordinates);
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=959764aef958aca1c60220a4c8d8110c&units=metric`;
+  // console.log(apiUrl);
+  axios.get(apiUrk).then(displayForecast);
+}
+
 function displayTemperature(responce) {
   console.log(responce);
 
@@ -21,6 +28,8 @@ function displayTemperature(responce) {
     "src",
     `http://openweathermap.org/img/wn/${responce.data.weather[0].icon}@2x.png`
   );
+  console.log(responce);
+  getForcastCoordinate(responce.data.coord);
 }
 function actualDate(timestamp) {
   let dateCurrent = new Date(timestamp); //new Date показывает актуальное время
@@ -45,6 +54,30 @@ function actualDate(timestamp) {
   return `${days}  ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+
+    let forecastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tue", "Wend"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+              <div class="col-2">
+                <div class="weather-forecast-date">${day}</div>
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                  alt="Clear"
+                  width="30px"
+                  id="temperature-img"
+                />
+                <div class="forecast-temperature-degree"><span class="highest-temperature">17/<span class="lowest-temperature">22</span></span></div> </div>
+                `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 function search(city) {
   let apiKey = "959764aef958aca1c60220a4c8d8110c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=959764aef958aca1c60220a4c8d8110c&units=metric`;
@@ -70,6 +103,7 @@ function displayCelsuisTemperature(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 search("New York");
+displayForecast();
 
 let celsiusTemperature = null;
 
