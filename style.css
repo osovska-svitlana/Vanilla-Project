@@ -58,12 +58,31 @@ img {
 }
 
 .weather-img .active {
-  color:#70757a ;
-  cursor:auto;
+  color: #70757a;
+  cursor: auto;
   text-decoration: none;
-} 
-.weather-img .active:hover{
+}
+.weather-img .active:hover {
   text-decoration: none;
+}
+.weather-forecast-date {
+  text-align: center;
+  margin-top: 5 px;
+  font-family: arial, sans-serif;
+  line-height: 15px;
+}
+.forecast-temperature-degree {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 15px;
+  text-align: center;
+}
+.lowest-temperature {
+  opacity: 0.5;
+}
+#temperature-img {
+  display: block;
+  margin: auto;
 }
 /* .cel {
   
